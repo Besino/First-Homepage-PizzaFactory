@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>give Tony Feedback</title>
+    <link rel="stylesheet" href="../css/headerstyles.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/indexbodystyles.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/navigationbar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../js/form_validate.js"></script>
+    <script src="../js/RESTREQUESTS.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+
+
+</head>
+<body onload="authentifizieren3()">
+<header>
+    <div class="topnav" id="myTopnav">
+        <a href="../index.html">Tony's Pizza Factory</a>
+        <a href="../pizza/pizza.html">Pizza</a>
+        <a href="../salad/salad.html">Salad</a>
+        <a href="../softdrinks/softdrinks.html">Softdrinks</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+</header>
+<h1 id="title">Tell us what you think</h1>
+<div class="container-fluid" id="feedback">
+    <div class="row" id="feedback">
+        <div class="col-sm-6 text-sm-right">
+    How do you like our pizza?
+        </div>
+        <div class="col-sm-6">
+    <input type="radio" name="taste" value="awesome" onclick="checkTaste();validateForm()">Awesome
+    <input type="radio" name="taste" value="good" onclick="checkTaste();validateForm()">Good
+    <input type="radio" name="taste" value="okay" onclick="checkTaste();validateForm()">Okay
+    <input type="radio" name="taste" value="poor" onclick="checkTaste();validateForm()">Poor
+        </div>
+    </div>
+    <div class="row" id="feedback">
+        <div class="col-sm-6 text-sm-right">
+    What do you think about our prizes?
+        </div>
+        <div class="col-sm-6">
+    <input type="radio" name="price" value="fair" onclick="checkPrice();validateForm()">Fair
+    <input type="radio" name="price" value="okay" onclick="checkPrice();validateForm()">Okay
+    <input type="radio" name="price" value="expensive" onclick="checkPrice();validateForm()">Expensive
+    </div>
+    </div>
+    <div class="row" id="feedback">
+        <div class="col-sm-6 text-sm-right">
+    Your name?
+        </div>
+        <div class="col-sm-6">
+    <input id='txtUsername' type="text" name="name" onchange="Javascript:checkUsername();showDiv2();validateForm()">
+            <div id="hidden_div3" style="display: none;"><h6><img src="ok.png" width="20px" height="auto"></h6></div>
+            <div id="hidden_div4" style="display: none;"><h6>Your name has to be more han 2 characters long & (A-Z)</h6></div>
+        </div>
+    </div>
+    <div class="row" id="feedback">
+        <div class="col-sm-6 text-sm-right">
+            Your e-mail address?
+        </div>
+        <div class="col-sm-6">
+            <input  type="email" name="email" id='txtEmail' onchange="Javascript:checkEmail();showDiv();validateForm()">
+            <div id="hidden_div" style="display: none;"><h6><img src="ok.png" width="20px" height="auto"></h6></div>
+            <div id="hidden_div2" style="display: none;"><h6>You enterd a invalid Email adress, please correct</h6></div>
+        </div>
+    </div>
+    <div class="row" id="feedback">
+        <div class="col-sm-6 text-sm-right">
+            What can we do better?
+        </div>
+        <div class="col-sm-6">
+            <textarea id="txtFeedback" name="improvment" rows="5" cols="50" onchange="checkFeedback();showDiv3();validateForm()"></textarea>
+            <div id="hidden_div5" style="display: none;"><h6><img src="ok.png" width="20px" height="auto"></h6></div>
+            <div id="hidden_div6" style="display: none;"><h6>Feedback should have more than 50 Characters to be valid!</h6></div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <button id='submit' type="submit" class="btn btn-pill btn-success" disabled onclick="sendfeedback()">Send</button>
+    </div>
+    </div>
+<div id="lastfeedbacks" class="container">
+    <div class="row">
+    <div class="col-xl-6 col-sm-12">
+    <h2>Last Feedbacks...</h2>
+        <table>
+        <thead>
+        <tr>
+            <th class="name">Name</th>
+            <th class="email">Email</th>
+            <th class="Feedback">Feedback</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td id="name1"></td>
+            <td id="email1"></td>
+            <td id="feedback1"></td>
+        </tr>
+        <tr>
+            <td id="name2"></td>
+            <td id="email2"></td>
+            <td id="feedback2"></td>
+        </tr>
+        <tr>
+            <td id="name3"></td>
+            <td id="email3"></td>
+            <td id="feedback3"></td>
+        </tr>
+        <tr>
+            <td id="name4"></td>
+            <td id="email4"></td>
+            <td id="feedback4"></td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+        <div class="col-xl-3 col-sm-6">
+            <div id="piechart" style="width: 300px; height: 200px;">    </div>
+        </div>
+        <div class="col-xl-3 col-sm-6">
+            <div id="piechart2" style="width: 300px;height: 200px;"> </div>
+
+        </div>
+</div>
+
+
+<footer class="footer">
+    <hr id="footerline"  color="limegreen">
+    <hr id="footerline"  color="white">
+    <hr id="footerline" color="red">
+    <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12 text-sm-left text-center">Hours:<br>Mon-Thu: <time datetime="11:00-23:00">11am - 23pm</time><br>Fri-Sat: <time datetime="11:00-24:00">11am-24pm</time><br>Sunday closed</div>
+        <div id="hide1" class="col-md-4 text-center">"The Pizzaria is one place I have been wanting to visit for a long time. The reason being their Rustica pizza which absolutely blew me away" - Jimmy</div>
+        <div class="col-md-2"></div>
+        <div id="hide1" class="col-md-2 col-sm-6 col-xs-12 text-sm-left text-center">Adress:<br><adress>Tony's Pizza Factory<br>2122 N Clark<br> St Chicago, IL 60614, USA</adress></div>
+    </div>
+</footer>
+
+</body>
+</html>

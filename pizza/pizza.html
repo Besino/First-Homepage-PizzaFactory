@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tony's Pizza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/headerstyles.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/indexbodystyles.css">
+    <script src="../js/navigationbar.js"></script>
+    <script src="../js/RESTREQUESTS.js"></script>
+
+</head>
+
+<body onload="authentifizieren()">
+    <header>
+        <div class="topnav" id="myTopnav">
+            <a href="../index.html">Tony's Pizza Factory</a>
+            <a href="pizza.html">Pizza</a>
+            <a href="../salad/salad.html">Salad</a>
+            <a href="../softdrinks/softdrinks.html">Softdrinks</a>
+            <a href="../feedback/feedback.html">Feedback</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+    </header>
+
+ <div id="main" class="container-fluid">
+        <h1>Pizzas</h1>
+
+    <div class="row" id="pizzapic">
+        <div class="col-xl-3 col-md-4 col-sm-6">
+            <img id="pizzapic0">
+            <div class="row">
+                <div id="name" class="col-8"><h4 id="pizzaname0"></h4></div><div id="add" class="col-4"><h4 id="preis0"></h4>
+                <button class="btn btn-pill btn-success" onclick="order('pizza','Piccante')" >add</button></div>
+            </div>
+                <p id="zutaten0"></p>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-6">
+            <img id="pizzapic1">
+            <div class="row">
+                <div id="name" class="col-8"><h4 id="pizzaname1"></h4></div><div id="add" class="col-4"><h4 id="preis1"></h4>
+                <button type="submit" class="btn btn-pill btn-success" onclick="order('pizza','Giardino')">add</button></div>
+            </div>
+                <p id="zutaten1"></p>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-6">
+            <img id="pizzapic2">
+            <div class="row">
+                <div id="name" class="col-8"><h4 id="pizzaname2"></h4></div><div id="add" class="col-4"><h4 id="preis2"></h4>
+                <button type="submit" class="btn btn-pill btn-success" onclick="order('pizza','Prosciuotto e funghi')">add</button></div>
+            </div>
+            <p id="zutaten2"></p>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-6">
+            <img id="pizzapic3">
+            <div class="row">
+                <div id="name" class="col-8"><h4 id="pizzaname3"></h4></div><div id="add" class="col-4"><h4 id="preis3"></h4>
+                <button type="submit" class="btn btn-pill btn-success" onclick="order('pizza','Quattro formaggi')">add</button></div>
+            </div>
+            <p id="zutaten3"></p>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-6">
+            <img id="pizzapic4">
+            <div class="row">
+                <div id="name" class="col-8"><h4 id="pizzaname4"></h4></div><div id="add" class="col-4"><h4 id="preis4"></h4>
+                <button type="submit" class="btn btn-pill btn-success" onclick="order('pizza','Quattro stagioni')">add</button></div>
+            </div>
+            <p id="zutaten4"></p>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-6">
+            <img id="pizzapic5">
+            <div class="row">
+                <div id="name" class="col-8"><h4 id="pizzaname5"></h4></div><div id="add" class="col-4"><h4 id="preis5"></h4>
+                <button type="submit" class="btn btn-pill btn-success" onclick="order('pizza','Stromboli')">add</button></div>
+            </div>
+            <p id="zutaten5"></p>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-6">
+            <img id="pizzapic6">
+            <div class="row">
+                <div id="name" class="col-8"><h4 id="pizzaname6"></h4></div><div id="add" class="col-4"><h4 id="preis6"></h4>
+                <button type="submit" class="btn btn-pill btn-success" onclick="order('pizza','Verde')">add</button></div>
+            </div>
+            <p id="zutaten6"></p>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-6">
+            <img id="pizzapic7">
+            <div class="row">
+                <div id="name" class="col-8"><h4 id="pizzaname7"></h4></div><div id="add" class="col-4"><h4 id="preis7"></h4>
+                <button type="submit" class="btn btn-pill btn-success" onclick="order('pizza','Rustica')">add</button></div>
+            </div>
+            <p id="zutaten7"></p>
+        </div>
+    </div>
+</div>
+    <footer class="footer">
+        <hr id="footerline"  color="limegreen">
+        <hr id="footerline"  color="white">
+        <hr id="footerline" color="red">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12 text-sm-left text-center">Hours:<br>Mon-Thu: <time datetime="11:00-23:00">11am - 23pm</time><br>Fri-Sat: <time datetime="11:00-24:00">11am-24pm</time><br>Sunday closed</div>
+            <div id="hide1" class="col-md-4 text-center">"The Pizzaria is one place I have been wanting to visit for a long time. The reason being their Rustica pizza which absolutely blew me away" - Jimmy</div>
+            <div class="col-md-2"></div>
+            <div id="hide1" class="col-md-2 col-sm-6 col-xs-12 text-sm-left text-center">Adress:<br><adress>Tony's Pizza Factory<br>2122 N Clark<br> St Chicago, IL 60614, USA</adress></div>
+        </div>
+    </footer>
+</body>
+</html>

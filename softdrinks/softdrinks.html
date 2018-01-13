@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tony's Softdrinks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/headerstyles.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/indexbodystyles.css">
+    <script src="../js/RESTREQUESTS.js"></script>
+    <script src="../js/navigationbar.js"></script>
+</head>
+<body onload="authentifizieren2()">
+<header>
+    <div class="topnav" id="myTopnav">
+        <a href="../index.html">Tony's Pizza Factory</a>
+        <a href="../pizza/pizza.html">Pizza</a>
+        <a href="../salad/salad.html">Salad</a>
+        <a href="softdrinks.html">Softdrinks</a>
+        <a href="../feedback/feedback.html">Feedback</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+</header>
+
+<h1>Soft drinks</h1>
+<div class="container-fluid" id="pizzapic">
+    <div class="row" >
+        <div class="col-xl-3 col-md-4 col-sm-6">
+            <img id="drinkpic0">
+            <div class="row">
+                <div id="name" class="col-8"><h4 id="drinkname0"></h4></div><div id="add" class="col-4"><h4 id="preis0"></h4>
+                <button type="submit" class="btn btn-pill btn-success" onclick="order('softdrink','Coke')">add</button></div>
+            </div>
+                <p id="volume0"></p>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-6">
+            <img id="drinkpic1">
+            <div class="row">
+                <div id="name" class="col-8"><h4 id="drinkname1"></h4></div><div id="add" class="col-4"><h4 id="preis1"></h4>
+                <button type="submit" class="btn btn-pill btn-success" onclick="order('softdrink','Fanta')">add</button></div>
+            </div>
+                <p id="volume1"></p>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-6">
+                <img id="drinkpic2">
+            <div class="row">
+                <div id="name" class="col-8"><h4 id="drinkname2"></h4></div><div id="add" class="col-4"><h4 id="preis2"></h4>
+                <button type="submit" class="btn btn-pill btn-success" onclick="order('softdrink','Pepsi')">add</button></div>
+            </div>
+                <p id="volume2"></p>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-6">
+                <img id="drinkpic3">
+                    <div class="row">
+                        <div id="name" class="col-8"><h4 id="drinkname3"></h4></div><div id="add" class="col-4"><h4 id="preis3"></h4>
+                        <button type="submit" class="btn btn-pill btn-success" onclick="order('softdrink','Red Bull')">add</button></div>
+                    </div>
+                <p id="volume3"></p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <hr id="footerline"  color="limegreen">
+    <hr id="footerline"  color="white">
+    <hr id="footerline" color="red">
+    <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12 text-sm-left text-center">Hours:<br>Mon-Thu: <time datetime="11:00-23:00">11am - 23pm</time><br>Fri-Sat: <time datetime="11:00-24:00">11am-24pm</time><br>Sunday closed</div>
+        <div id="hide1" class="col-md-4 text-center">"The Pizzaria is one place I have been wanting to visit for a long time. The reason being their Rustica pizza which absolutely blew me away" - Jimmy</div>
+        <div class="col-md-2"></div>
+        <div id="hide1" class="col-md-2 col-sm-6 col-xs-12 text-sm-left text-center">Adress:<br><adress>Tony's Pizza Factory<br>2122 N Clark<br> St Chicago, IL 60614, USA</adress></div>
+    </div>
+</footer>
+</body>
+</html>

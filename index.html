@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tony's Pizza Factory</title>
+    <link rel="stylesheet" href="css/headerstyles.css">
+    <link rel="stylesheet" href="css/indexbodystyles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/navigationbar.js"></script>
+    <script src="js/RESTREQUESTS.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body onload="authentifizieren()">
+<header>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Tony's Pizza Factory</a>
+        <a href="pizza/pizza.html">Pizza</a>
+        <a href="salad/salad.html">Salad</a>
+        <a href="softdrinks/softdrinks.html">Softdrinks</a>
+        <a href="feedback/feedback.html">Feedback</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+</header>
+<div id="main" class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+        <h1 id="title">Welcome to Tony's Pizza Factory</h1>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-sm-3 col-xl-4"></div>
+                <div class="col-sm-6 col-xl-4 col-12 justify-content-center" id="titlepic">
+                                 <img  src="titel.jpg" id="titlepic">
+                </div>
+        </div>
+        <div class="col-sm-3 col-xl-4"></div>
+
+        <div id="indexpicsover" class="row">
+                    <div class="col-sm-1 col-xl-3">
+                    </div>
+                    <div id="indexpics" class="col-sm-10  col-xl-6 col-12">
+                        <div class="row">
+                            <div id="indexpics" class="col-sm-4 col-6">
+                                <a href="salad/salad.html"><img src="salad.jpg" alt="go to Salads selection"></a>
+                            </div>
+                            <div id="indexpics" class="col-sm-4 col-6">
+                                <a href="pizza/pizza.html"><img src="pizza.jpg" alt="go to Pizza selection"></a>
+                            </div>
+                            <div id="indexpics" class="col-sm-4 col-6">
+                            <a href="softdrinks/softdrinks.html"><img src="softdrinks.jpg" alt="go to Softdrinksselection"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1 col-xl-3">
+                    </div>
+        </div>
+</div>
+
+<footer class="footer">
+    <hr id="footerline"  color="limegreen">
+    <hr id="footerline"  color="white">
+    <hr id="footerline" color="red">
+    <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12 text-sm-left text-center">Hours:<br>Mon-Thu: <time datetime="11:00-23:00">11am - 23pm</time><br>Fri-Sat: <time datetime="11:00-24:00">11am-24pm</time><br>Sunday closed</div>
+        <div id="hide1" class="col-md-4 text-center">"The Pizzaria is one place I have been wanting to visit for a long time. The reason being their Rustica pizza which absolutely blew me away" - Jimmy</div>
+        <div class="col-md-2"></div>
+        <div id="hide1" class="col-md-2 col-sm-6 col-xs-12 text-sm-left text-center">Adress:<br><adress>Tony's Pizza Factory<br>2122 N Clark<br> St Chicago, IL 60614, USA</adress></div>
+    </div>
+</footer>
+</body>
+</html>

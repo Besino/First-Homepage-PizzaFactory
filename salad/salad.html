@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tony's Salads</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/headerstyles.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/indexbodystyles.css">
+    <script src="../js/navigationbar.js"></script>
+    <script src="../js/RESTREQUESTS.js"></script>
+</head>
+<body onload="authentifizieren1()">
+<header>
+    <div class="topnav" id="myTopnav">
+        <a href="../index.html">Tony's Pizza Factory</a>
+        <a href="../pizza/pizza.html">Pizza</a>
+        <a href="salad.html">Salad</a>
+        <a href="../softdrinks/softdrinks.html">Softdrinks</a>
+        <a href="../feedback/feedback.html">Feedback</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+</header>
+
+<div class="container-fluid" id="pizzapic">
+    <h1>Salad</h1>
+
+        <div class="row" >
+            <div class="col-xl-3 col-md-4 col-sm-6">
+                <img id="saladpic0">
+                <div class="row">
+                    <div id="name" class="col-8"><h4 id="saladname0"></h4></div><div id="add" class="col-4"><h4 id="preis0"></h4>
+                    <button type="submit" class="btn btn-pill btn-success" onclick="order('salad','Green salad with tomatoe')">add</button></div>
+                </div>
+                <p id="zutaten0"></p>
+                <select name="dressing">
+                    <option>Italian dressing</option>
+                    <option>French dressing</option>
+                    <option>Housemade dressing</option>
+                </select>
+            </div>
+            <div class="col-xl-3 col-md-4 col-sm-6">
+        <img id="saladpic1">
+                <div class="row">
+                    <div id="name" class="col-8"><h4 id="saladname1"></h4></div><div id="add" class="col-4"><h4 id="preis1"></h4>
+                    <button type="submit" class="btn btn-pill btn-success" onclick="order('salad','Tomato salad with mozzarella')">add</button></div>
+                </div>
+        <p id="zutaten1"></p>
+        <p>
+            <select name="dressing">
+                <option>Italian dressing</option>
+                <option>French dressing</option>
+                <option>Housemade dressing</option>
+            </select>
+        </p>
+            </div>
+            <div class="col-xl-3 col-md-4 col-sm-6">
+                <img id="saladpic2">
+                <div class="row">
+                    <div id="name" class="col-8"><h4 id="saladname2"></h4></div><div id="add" class="col-4"><h4 id="preis2"></h4>
+                    <button type="submit" class="btn btn-pill btn-success" onclick="order('salad','Field salad with egg')">add</button></div>
+                </div>
+                <p id="zutaten2"></p>
+                <p>
+                    <select name="dressing">
+                        <option>Italian dressing</option>
+                        <option>French dressing</option>
+                        <option>Housemade dressing</option>
+                    </select>
+                </p>
+            </div>
+            <div class="col-xl-3 col-md-4 col-sm-6">
+                <img id="saladpic3">
+                <div class="row">
+                    <div id="name" class="col-8"><h4 id="saladname3"></h4></div><div id="add" class="col-4"><h4 id="preis3"></h4>
+                    <button type="submit" class="btn btn-pill btn-success" onclick="order('salad','Rocket with parmesan')">add</button></div>
+                </div>
+                <p id="zutaten3"></p>
+                <p>
+                    <select name="dressing">
+                        <option>Italian dressing</option>
+                        <option>French dressing</option>
+                        <option>Housemade dressing</option>
+                    </select>
+                </p>
+            </div>
+        </div>
+    </div>
+
+<footer class="footer">
+    <hr id="footerline"  color="limegreen">
+    <hr id="footerline"  color="white">
+    <hr id="footerline" color="red">
+    <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12 text-sm-left text-center">Hours:<br>Mon-Thu: <time datetime="11:00-23:00">11am - 23pm</time><br>Fri-Sat: <time datetime="11:00-24:00">11am-24pm</time><br>Sunday closed</div>
+        <div id="hide1" class="col-md-4 text-center">"The Pizzaria is one place I have been wanting to visit for a long time. The reason being their Rustica pizza which absolutely blew me away" - Jimmy</div>
+        <div class="col-md-2"></div>
+        <div id="hide1" class="col-md-2 col-sm-6 col-xs-12 text-sm-left text-center">Adress:<br><adress>Tony's Pizza Factory<br>2122 N Clark<br> St Chicago, IL 60614, USA</adress></div>
+    </div>
+</footer>
+</body>
+</html>

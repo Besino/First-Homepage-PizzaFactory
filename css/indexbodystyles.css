@@ -1,0 +1,211 @@
+/*body-styles Allgemein und bei Maximaler Bildschirmgrösse*/
+h1 {
+    text-align: center;
+}
+#pizzapic p {
+    font-size: 11px;
+}
+#pizzapic img {
+    width: 100%;
+    max-height: 180px;
+    border-radius: 20px;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+}
+#titlepic img{
+    display: flex;
+    width: 100%;
+    border-radius: 20px;
+    margin: 0 0 0 0;
+}
+#indexpics img{
+    width: 100%;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#main {
+    min-height: 100%;
+    margin-bottom: 10%;
+}
+body {
+    background-image: url("../background_index.jpg");
+}
+
+h4 {
+    font-size: 17px;
+}
+#name {
+    display: flex;
+    align-items: flex-end;
+}
+#add {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0.5em;
+    padding-right: 1em;
+}#add, h4 {
+     padding-right: 1em;
+ }
+#feedback {
+    margin: 0 0 0 0;
+}
+#lastfeedbacks {
+    margin: 0 0 0 0;
+}
+#lastfeedbacks h2 {
+    text-align: center;
+    font-size: small;
+}
+
+#lastfeedbacks th {
+    font-size: medium;
+    border: 1px solid #040505;
+}
+#lastfeedbacks th.name {
+    width: 20%;
+}
+#lastfeedbacks th.email {
+    width: 20%;
+}
+#lastfeedbacks th.Feedback{
+    width: 60%;
+}
+#lastfeedbacks td {
+    font-size: x-small;
+    word-wrap: break-word;
+    border: 1px solid #040505;
+}
+#lastfeedbacks table {
+    table-layout: fixed;
+    border: 2px solid #040505;
+    width: 100%;
+}
+/* Sticky footer styles, für den Footer der mit dem Inhalt der Webpage mitfolgt
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 100px; /* Margin bottom by footer height, muss höher als height von Footer sein */
+    min-height: 100%;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px; /* Höhe des Footers */
+    line-height: 15px; /* Zeilenhöhe des Footers */
+    background-color: #333;
+    color: white;
+    font-size: small;
+}
+#footercontent {
+    margin-top: 1em;
+}
+#footerline {
+    margin-top: 0;
+    margin-bottom: 0px;
+    height: 10px;
+    opacity: 0.8;
+}
+/** Footer hiddings bei kleiner als 400px
+Bei sehr kleiner Bildschirmgrösse, Ausblendungen & Schriftgrössenanpassung die nicht mit Bootstrap gedeckt wurden */
+@media screen and (max-width: 400px) {
+    #hide1 {
+        visibility: hidden;
+        clear: both;
+        display: none;
+    }
+
+    .footer {
+        font-size: x-small;
+    }
+
+}
+/*Bildrahmenanpassungen bei Inhalten Pizza, Softdrings usw... bei kleiner 567px*/
+@media screen and (max-width: 576px) {
+    #pizzapic img {
+        width: 100%;
+        border-radius: 20px;
+        padding-top: 0.25em;
+        padding-left: 0.5%;
+        padding-right: 0.5%;
+    }
+}
+
+/** Titel Grösse Anpassung bei kleiner als 630*/
+@media only screen and (max-width: 630px) {
+    #title {
+        font-size: 20px;
+    }
+    #lastfeedbacks td {
+        font-size: x-small;
+    }
+}
+/* Kleine Geräte (Tablets, 768px und breiter) Hideings & Bildramenanpassungen */
+@media screen and (max-width: 768px) {
+    #hide1 {
+        visibility: hidden;
+        clear: both;
+        display: none;
+    }
+
+    #indexpics  {
+        margin-left: 0em;
+        margin-right: 0em;
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+        margin-bottom: .25em;
+    }
+    #indexpicsover {
+        margin-left: 0em;
+        margin-right: 0em;
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+        margin-bottom: 5.5em;
+    }
+
+    #main {
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+        min-height: 100%;
+    }
+
+    #titlepic img {
+        max-height: 200px;
+        width: auto;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #indexpics img{
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+    }
+}
+/* Ausblendung von Div's für die Feedbackeingaben, und Farben */
+#hidden_div h6 {
+    color: green;
+}
+#hidden_div2 h6 {
+    color: red;
+}
+#hidden_div3 h6 {
+    color: green;
+}
+#hidden_div4 h6 {
+    color: red;
+}
+#hidden_div5 h6 {
+    color: green;
+}
+#hidden_div6 h6 {
+    color: red;
+}
